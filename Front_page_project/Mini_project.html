@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Mini project</title>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/seedrandom/3.0.5/seedrandom.min.js" integrity="sha512-+Ru50BzEpZjlFzVnjSmJfYFPFfY2hS0Kjlu/IvqaJoux7maF5lJrRVUJWJ2LevPls7rd242GLbWEt+zAo4OVVQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+        <!-- CDN -->
+        <script src="https://cdn.tailwindcss.com"></script>
+        <link rel="stylesheet" href="style.css" />
+        <link rel="stylesheet" href="output.css" />
+        <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+        <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+    </head>
+
+    <body class="bg-orange-200 ">
+
+        <!-- NAVIGATION avec bouton d'affichage pour petit écran -->
+        <nav class="p-5 md:flex md:items-center md:justify-between">
+            <div class="flex justify-between items-center">
+                <span class="cursor-pointer"><img src="images\Quokka.png" alt="logo" class="w-20"></span>
+                <span class="text-2xl md:hidden"><ion-icon name="menu-outline" onclick="sidebar(this)"></ion-icon></span>
+            </div>
+            <ul id="list" class="md:flex md:items-center z-[-1] md:z-auto md:static absolute w-full left-0 md:w-auto md:opacity-100 opacity-0 top-[-400px] transition ease-out duration-700">
+                <li class="mx-4 my-5 md:my-0"> <a href="" class="text-xl hover:bg-orange-500 duration 100">Home</a></li>
+                <li class="mx-4 my-5 md:my-0"> <a href="" class="text-xl hover:bg-orange-500 duration 100">Blog</a></li>
+                <li class="mx-4 my-5 md:my-0"> <a href="" class="text-xl hover:bg-orange-500 duration 100">Name</a></li>
+                <li class="mx-4 my-5 md:my-0"> <a href="" class="text-xl hover:bg-orange-500 duration 100">About Us</a></li>
+                <li class="mx-4 my-5 md:my-0"> <a href="" class="text-xl hover:bg-orange-500 duration 100">Privacy Policy</a></li>
+                <li class="mx-4 my-5 md:my-0"> <a href="" class="text-xl hover:bg-orange-500 duration 100">Contact Us</a></li>
+
+                <button class="bg-amber-300 hover:text-orange-500 duration 100 px-5 py-2 rounded-lg ml-5">Find Us</button>
+            </ul>
+        </nav>
+        <!-- FIN Navigation -->
+
+        <!-- Debut BANNIERE -->
+        <section style="background-image: url(images/bg_quokka.png)" class="bg-cover bg-no-repeat">
+            <ul class="container flex p-5 text-white font-bold">
+                <li>Home</li>
+                <li class="pl-5">Quokka Land</li>
+            </ul>
+                <h1 class="text-6xl font-bold text-white text-center">The #1 Quokka Place</h1>
+            <ul class="text-center pt-4">
+                <li class="text-lg font-bold text-white"><ion-icon name="leaf" class="text-green-700"></ion-icon>Somes quokkas</li>
+                <li class="text-lg font-bold text-white"><ion-icon name="leaf" class="text-green-700"></ion-icon>More Quokkas</li>
+                <li class="text-lg font-bold text-white"><ion-icon name="leaf" class="text-green-700"></ion-icon>EVEN MORE Quokkas</li>
+            </ul>
+            <h2 class="text-6xl font-bold text-white p-10 text-center">Definitly what you need ?</h2>
+            <div class="text-center">
+                <button class="bg-amber-300 text-white font-bold py-1 px-3 mb-6 rounded-full hover:bg-orange-500">Of course</button>
+            </div>
+            <p class="text-center text-white text-2xl pb-2">172 Quokkas living free</p>
+        </section>
+        <!-- Fin BANNIERE -->
+
+        <!-- Debut Blog -->
+        <section>
+            <div class="w-full flex flex-wrap justify-center">
+                <div>
+                    <img src="images/banner.png" class="w-full pl-6 py-6 mt-4" alt="nature">
+                </div>
+                <div class="flex justify-center">
+                    <p class="bg-orange-100 text-gray-700 mb-1 text-center w-1/2">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."</p>
+                </div>
+            </div>
+        </section>
+        <!-- Blog fin -->
+
+        <!-- Debut Sections -->
+        <h2 class="text-center mt-20 text-4xl font-bold">Propose a name for a Quokka</h2>
+        <form class="max-w-md mx-auto">
+            <div class="mb-4">
+              <label class="block text-gray-700 font-bold mb-2" for="quokka-name">
+                Quokka's Name
+              </label>
+              <input class="appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" id="quokka-name" type="text" placeholder="Enter Quokka's Name">
+            </div>
+            <button class="bg-amber-300 hover:bg-orange-500 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline" type="submit">
+              Send
+            </button>
+        </form>
+        <!-- Fin Sections -->
+
+        <!-- Debut Pied de page -->
+        <footer class="mt-10 bg-orange-100">
+            <div class="flex justify-center border-t-4 border-dashed border-amber-300">
+                <div class="mt-6 text-center">
+                    <h2 class="text-gray-900 tracking-widest text-xl mb-3">Follow us</h2>
+                    <ul>
+                        <li><a class="text-blue-600" href=""><ion-icon name="logo-facebook"></ion-icon></a></li>
+                        <li><a class="text-blue-600" href=""><ion-icon name="logo-twitter"></ion-icon></a></li>
+                        <li><a class="text-red-600" href=""><ion-icon name="logo-instagram"></ion-icon></a></li>
+                        <li><a class="text-purple-600" href=""><ion-icon name="logo-twitch"></ion-icon></a></li>
+                    </ul>
+                </div>
+            </div>
+        </footer>
+        <!-- Fin Pied de page -->
+
+        <script>
+            function sidebar(e){
+                let list = document.getElementById("list");
+                e.name ==="menu"
+                ? ((e.name ="close"),
+                list.classList.add("top-[80px]"),
+                list.classList.add("z-10"),
+                list.classList.add("bg-orange-200"),
+                list.classList.add("w-1/5"),
+                list.classList.add("opacity-100"))
+                : ((e.name = "menu"),
+                list.classList.remove("top-[80px]"),
+                list.classList.remove("z-10"),
+                list.classList.remove("bg-orange-200"),
+                list.classList.remove("w-1/5"),
+                list.classList.remove("opacity-100"))
+            }
+        </script>
+    </body>
+</html>
